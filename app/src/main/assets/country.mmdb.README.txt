@@ -1,0 +1,14 @@
+country.mmdb - offline IP-to-country table for the Map tab.
+
+Source:  "server-country" from https://github.com/sapics/ip-location-db
+Licence: Open Data Commons Public Domain Dedication and License (PDDL 1.0)
+         Free to use, modify and redistribute, including commercially.
+         No attribution is required and there is no rule to delete older copies.
+Built from Regional Internet Registry delegation statistics, public BGP routing
+archives (Route Views, RIPE RIS) and operator geofeeds.
+
+To refresh:  pip install mmdb-writer netaddr
+             python tools/build_geoip.py
+Then rebuild the app.
+
+Used for the map only. It never takes part in a firewall blocking decision.

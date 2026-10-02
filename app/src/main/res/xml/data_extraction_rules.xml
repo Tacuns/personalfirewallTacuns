@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Android 12 (API 31) and higher.
+
+  This app keeps DNS query logs, firewall rules and app policies on the device and
+  nowhere else. android:allowBackup="false" already stops Google Drive backups, but
+  on Android 12+ it does NOT reliably stop a device-to-device transfer: the platform
+  documentation states that on devices from some manufacturers allowBackup="false"
+  "disables cloud-based backup and restore ... but doesn't disable device-to-device
+  transfers for the app".
+  See https://developer.android.com/identity/data/autobackup
+
+  So every copy path is refused explicitly. domain="root" path="." covers the whole
+  private data directory and all of its subdirectories, which includes
+  sentinel-logs.db, sentinel-rules.db, the DataStore files and the copied
+  country table.
+
+  Users who want to move their settings to another phone use the app's own
+  Backup / restore (JSON) instead, which is a deliberate, visible action.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="root" path="." />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="root" path="." />
+    </device-transfer>
+</data-extraction-rules>

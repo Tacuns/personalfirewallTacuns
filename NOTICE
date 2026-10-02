@@ -1,0 +1,45 @@
+TacUNS Personal Firewall
+Copyright 2026 Tacuns
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+The TacUNS name and logo are not licensed under the Apache License (section 6).
+
+-------------------------------------------------------------------------------
+Third-party material included in this repository
+-------------------------------------------------------------------------------
+
+app/src/main/assets/country.mmdb
+  "server-country" IP-to-country database from ip-location-db
+  https://github.com/sapics/ip-location-db
+  Licence: Open Data Commons Public Domain Dedication and License (PDDL) v1.0
+  https://opendatacommons.org/licenses/pddl/1-0/
+
+gradle/wrapper/gradle-wrapper.jar
+  Gradle Wrapper, https://gradle.org
+  Licence: Apache License, Version 2.0
+
+-------------------------------------------------------------------------------
+Libraries downloaded at build time (not stored in this repository)
+-------------------------------------------------------------------------------
+
+All are licensed under the Apache License, Version 2.0, as declared in their
+published Maven metadata:
+
+  AndroidX (Core, AppCompat, Activity, Fragment, Lifecycle, Navigation, Room,
+  WorkManager, DataStore, RecyclerView, ConstraintLayout and their dependencies)
+  Jetpack Compose (UI, Foundation, Material, Material 3, Material Icons)
+  Material Components for Android
+  Kotlin standard library and kotlinx.coroutines
+  Coil (image loading)               https://github.com/coil-kt/coil
+  MaxMind DB Reader (maxmind-db)     https://github.com/maxmind/MaxMind-DB-Reader-java
+
+-------------------------------------------------------------------------------
+Data downloaded by the app at run time (not stored in this repository)
+-------------------------------------------------------------------------------
+
+  StevenBlack Unified Hosts          https://github.com/StevenBlack/hosts
+  Licence: MIT
+
+Blocklists a user adds by link are downloaded from the addresses the user enters
+and remain under their own licences.

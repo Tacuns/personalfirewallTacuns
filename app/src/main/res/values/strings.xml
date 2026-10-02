@@ -1,0 +1,1010 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Legacy strings from the deleted pre-Compose (com.tacu.nsfwzerotrust.*) app.
+         Confirmed via full-codebase grep: 0 stringResource()/R.string references anywhere
+         in app/src/main/java — none of these are displayed by the current UI. Marked
+         translatable="false" so they don't require a Tamil translation; left in place
+         (not deleted) since removing them is outside this change's scope. -->
+    <string name="app_name" translatable="false">TacU-NS Firewall</string>
+    <string name="dashboard_title" translatable="false">Zero-Trust Firewall</string>
+    <string name="dashboard_subtitle" translatable="false">Local-only Android firewall inspired by enterprise packet flow.</string>
+    <string name="protection_status" translatable="false">Protection Status</string>
+    <string name="start_protection" translatable="false">Start protection</string>
+    <string name="stop_protection" translatable="false">Stop protection</string>
+    <string name="allowed_label" translatable="false">Allowed</string>
+    <string name="blocked_label" translatable="false">Blocked</string>
+    <string name="total_events" translatable="false">Total Events</string>
+    <string name="dashboard_note" translatable="false">VPN mode captures traffic metadata, applies app and DNS rules, and stores local logs on device only.</string>
+    <string name="rules_title" translatable="false">Application Rules</string>
+    <string name="dns_title" translatable="false">DNS Filter Rules</string>
+    <string name="domain_hint" translatable="false">example.com</string>
+    <string name="add_domain_rule" translatable="false">Add domain rule</string>
+    <string name="logs_title" translatable="false">Firewall Logs</string>
+    <string name="clear_logs" translatable="false">Clear logs</string>
+    <string name="settings_title" translatable="false">Privacy and Support</string>
+    <string name="privacy_copy" translatable="false">TacU-NS Firewall stores rules and logs on device only. No user account is required.</string>
+    <string name="disclosure_copy" translatable="false">This release uses Android VpnService for local traffic handling. All firewall decisions are made on-device. No data is shared with third parties.</string>
+    <string name="open_privacy_policy" translatable="false">Open privacy policy</string>
+    <string name="open_support" translatable="false">Open support page</string>
+    <string name="start_on_boot" translatable="false">Restart firewall after device reboot</string>
+    <string name="dashboard_tab" translatable="false">Dashboard</string>
+    <string name="rules_tab" translatable="false">Apps</string>
+    <string name="dns_tab" translatable="false">DNS</string>
+    <string name="logs_tab" translatable="false">Logs</string>
+    <string name="settings_tab" translatable="false">Settings</string>
+    <string name="allow" translatable="false">Allow</string>
+    <string name="block" translatable="false">Block</string>
+    <string name="delete_rule" translatable="false">Delete rule</string>
+    <string name="notification_title" translatable="false">Firewall protection active</string>
+    <string name="notification_message" translatable="false">Monitoring traffic and enforcing local rules.</string>
+    <string name="notification_channel_name" translatable="false">Firewall status</string>
+    <string name="vpn_session_name" translatable="false">Sentinel Firewall VPN</string>
+    <string name="onboarding_title" translatable="false">Before protection starts</string>
+    <string name="onboarding_body" translatable="false">This app creates a local VPN interface to inspect traffic metadata on your device, apply app and DNS rules, and store security events.</string>
+    <string name="onboarding_disclosure_title" translatable="false">VPN and cloud disclosure</string>
+    <string name="onboarding_disclosure_body" translatable="false">Sentinel processes all traffic locally on your device. No browsing data is sent to external servers. Domain block rules are downloaded from open-source community lists only.</string>
+    <string name="onboarding_website_title" translatable="false">Support website</string>
+    <string name="onboarding_continue" translatable="false">Accept and continue</string>
+    <string-array name="firewall_actions" translatable="false">
+        <item>Allow</item>
+        <item>Block</item>
+    </string-array>
+
+    <!-- Localization Phase 1 proof-of-concept strings — Language screen + SecurityChecklistScreen -->
+    <string name="language_screen_title">Language</string>
+    <string name="cd_back">Back</string>
+    <string name="security_checklist_title">Security Checklist</string>
+    <string name="checklist_summary">%1$d of %2$d checks passed — the same facts behind your Dashboard Security Score, shown here as a plain list.</string>
+    <string name="checklist_item_vpn_label">Firewall (VPN) is active</string>
+    <string name="checklist_item_vpn_detail">The core protection is switched on right now.</string>
+    <string name="checklist_item_threat_db_label">Threat database is loaded</string>
+    <string name="checklist_item_threat_db_detail">At least 1,000 known bad domains are ready to block.</string>
+    <string name="checklist_item_blocked_today_label">A threat was blocked today</string>
+    <string name="checklist_item_blocked_today_detail">The firewall has actively stopped something today.</string>
+    <string name="checklist_item_autostart_label">Auto-start after reboot is on</string>
+    <string name="checklist_item_autostart_detail">Protection resumes automatically if your phone restarts.</string>
+    <string name="checklist_item_blockrate_label">Healthy block rate today</string>
+    <string name="checklist_item_blockrate_detail">A meaningful share of today\'s traffic was blocked.</string>
+
+    <!-- Batch 1: Dashboard + main navigation. "TacU-NS FIREWALL" is a stylized brand
+         display distinct from app_name's casing — kept non-translatable, same as
+         app_name and the StevenBlack Blocklist proper noun below. -->
+    <string name="cd_settings">Settings</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_rules">Protect</string>
+    <string name="nav_appblock">Apps</string>
+    <string name="nav_map">Map</string>
+    <string name="nav_logs">Activity</string>
+    <string name="activity_view_list">Logs</string>
+    <string name="nav_security">Security</string>
+    <string name="security_title">SECURITY</string>
+    <string name="security_subtitle">Your protection at a glance</string>
+    <string name="security_checks_title">CHECKS</string>
+    <string name="security_checks_passed">Checks passed: %1$d / %2$d</string>
+    <string name="security_fix">Fix</string>
+    <string name="security_alerts_title">ALERTS</string>
+    <string name="security_alerts_new">New alerts: %1$d</string>
+    <string name="security_alerts_none">No new alerts</string>
+    <string name="security_see_all">See all</string>
+    <string name="security_blocklists_title">THREAT DATABASE</string>
+    <string name="security_blocklists_line">Domains ready to block: %1$s</string>
+    <string name="security_manage">Manage</string>
+    <string name="security_map_moved">Looking for the map? It is now in Activity: tap Map at the top.</string>
+    <string name="security_got_it">Got it</string>
+    <string name="more_tools_title">More tools</string>
+    <string name="more_tools_country_on">Geo blocking: %1$d on</string>
+    <string name="more_tools_country_off">Geo blocking: off</string>
+    <string name="more_tools_schedule_on">Scheduled blocking: on</string>
+    <string name="more_tools_schedule_off">Scheduled blocking: off</string>
+    <string name="more_tools_backup">Import / Export</string>
+    <string name="cd_more_tools_show">Show more tools</string>
+    <string name="cd_more_tools_hide">Hide more tools</string>
+    <string name="more_insights_title">More insights</string>
+    <string name="cd_more_insights_show">Show more insights</string>
+    <string name="cd_more_insights_hide">Hide more insights</string>
+
+    <string name="dash_brand_title" translatable="false">TacU-NS FIREWALL</string>
+    <string name="dash_status_active">Active</string>
+    <string name="dash_status_offline">Offline</string>
+    <string name="dash_subtitle_dns">• DNS Firewall</string>
+
+    <string name="vpn_active_title">Firewall Active</string>
+    <string name="vpn_offline_title">Firewall Offline</string>
+    <string name="vpn_active_desc">All network traffic is being monitored</string>
+    <string name="vpn_offline_desc">Tap to activate firewall protection</string>
+    <string name="vpn_toggle_on">ON</string>
+    <string name="vpn_toggle_off">OFF</string>
+    <string name="badge_vpn_firewall">VPN Firewall</string>
+    <string name="badge_dns_filter">DNS Filter</string>
+    <string name="badge_no_root">No Root</string>
+    <string name="vpn_help_what_it_is">This shows how the firewall protects your phone, using three simple badges.</string>
+    <string name="vpn_help_what_it_does">\"VPN Firewall\" means the app uses a private local connection on your phone to check every website you visit. \"DNS Filter\" means it checks website addresses before your phone connects to them. \"No Root\" means it works without needing special admin access to your phone.</string>
+    <string name="vpn_help_why">Android requires a VPN-style connection to let an app check traffic without root access. This app only uses that connection on your own phone — your data is not sent to any outside server.</string>
+    <string name="vpn_help_benefit">You get strong protection without rooting your phone or sending your browsing through someone else\'s servers.</string>
+    <string name="vpn_help_practice_1">Seeing a \"VPN\" icon in your status bar is normal and expected while this protection is on.</string>
+
+    <string name="snapshot_section_title">TODAY\'S SNAPSHOT</string>
+    <string name="metric_threats_blocked">Threats Blocked</string>
+    <string name="metric_today">today</string>
+    <string name="metric_connections">Connections</string>
+    <string name="metric_allowed_today">allowed today</string>
+    <string name="metric_threat_db">Threat Database</string>
+    <string name="metric_known_domains">known domains</string>
+    <string name="metric_dns_requests">DNS Requests</string>
+    <string name="metric_total_today">total today</string>
+    <string name="metrics_help_title">Today\'s Snapshot</string>
+    <string name="metrics_help_what_it_is">These four boxes show what your firewall has done today.</string>
+    <string name="metrics_help_what_it_does">\"Threats Blocked\" counts harmful sites stopped. \"Connections\" counts normal sites allowed. \"Threat Database\" shows how many bad addresses this app knows about. \"DNS Requests\" is the total of both.</string>
+    <string name="metrics_help_why">This gives you a quick, simple view of how active and how protected your phone has been today.</string>
+    <string name="metrics_help_benefit">You can see at a glance that the app is working, without needing to check any settings.</string>
+    <string name="metrics_help_practice_1">These numbers reset each day.</string>
+
+    <string name="section_security_posture">SECURITY POSTURE</string>
+    <string name="section_weekly_report">7-DAY PRIVACY REPORT</string>
+    <string name="section_timeline">24H ACTIVITY TIMELINE</string>
+    <string name="section_threat_prevention">THREAT PREVENTION</string>
+    <string name="section_recent_threats">RECENT BLOCKED THREATS</string>
+    <string name="section_active_apps">MOST ACTIVE APPS</string>
+    <string name="badge_x_blocked">%1$s blocked</string>
+
+    <string name="threat_prevention_title">Advanced Threat Prevention</string>
+    <string name="row_ad_tracker_title">Ad &amp; Tracker Blocking</string>
+    <string name="badge_active">ACTIVE</string>
+    <string name="row_ad_tracker_engine" translatable="false">StevenBlack Blocklist</string>
+    <string name="row_ad_tracker_count">%1$s domains loaded</string>
+    <string name="row_dns_firewall_title">DNS Firewall</string>
+    <string name="badge_off">OFF</string>
+    <string name="row_dns_firewall_engine">VPN-based interception</string>
+    <string name="row_dns_firewall_count">%1$s requests blocked today</string>
+    <string name="row_dns_monitoring">Monitoring all DNS traffic</string>
+    <string name="row_custom_rules_title">Custom Domain Rules</string>
+    <string name="badge_user">USER</string>
+    <string name="row_custom_rules_engine">User-defined block list</string>
+    <string name="row_custom_rules_count">Block any domain from Apps tab</string>
+
+    <string name="threat_alert_source">Source: DNS Firewall</string>
+    <string name="badge_blocked">BLOCKED</string>
+
+    <string name="table_header_application">APPLICATION</string>
+    <string name="table_header_requests">REQUESTS (TODAY)</string>
+    <string name="app_activity_req">%1$s req</string>
+
+    <string name="grade_optimal">OPTIMAL</string>
+    <string name="grade_protected">PROTECTED</string>
+    <string name="grade_monitoring">MONITORING</string>
+    <string name="grade_at_risk">AT RISK</string>
+    <string name="grade_offline">OFFLINE</string>
+    <string name="grade_desc_optimal">Maximum protection active</string>
+    <string name="grade_desc_protected">Firewall is actively protecting</string>
+    <string name="grade_desc_monitoring">Basic protection running</string>
+    <string name="grade_desc_at_risk">Protection needs improvement</string>
+    <string name="grade_desc_offline">Enable VPN to activate protection</string>
+    <string name="score_suffix">/100</string>
+    <string name="score_protection_line">Protection score: %1$d / 100</string>
+    <string name="score_factor_vpn">VPN Firewall Active</string>
+    <string name="score_factor_threat_db">Threat Database Loaded</string>
+    <string name="score_factor_blocked_today">Threats Blocked Today</string>
+    <string name="score_factor_autostart">Auto-Start Enabled</string>
+    <string name="score_factor_block_rate">Active Block Rate</string>
+    <string name="security_score_help_title">Security Posture Score</string>
+    <string name="security_score_help_what_it_is">A single number out of 100 that shows how well protected your phone is right now.</string>
+    <string name="security_score_help_what_it_does">The app checks 5 things and adds up points for each one you have turned on or achieved. A higher score means better protection.</string>
+    <string name="security_score_help_why">Instead of checking many settings one by one, this one number tells you your overall protection level at a glance.</string>
+    <string name="security_score_help_benefit">You can quickly see if something important is turned off, and fix it to raise your score.</string>
+    <string name="security_score_help_practice_1">VPN Firewall Active (up to 30 points): points are earned when the firewall is turned on.</string>
+    <string name="security_score_help_practice_2">Threat Database Loaded (up to 25 points): points are earned once enough known-bad websites are loaded.</string>
+    <string name="security_score_help_practice_3">Threats Blocked Today (up to 15 points): points are earned once the app has blocked at least one threat today.</string>
+    <string name="security_score_help_practice_4">Auto-Start Enabled (up to 10 points): points are earned when \"Boot on Start\" is turned on in Settings.</string>
+    <string name="security_score_help_practice_5">Active Block Rate (up to 20 points): points are earned based on what share of today\'s traffic was blocked.</string>
+
+    <string name="weekly_last_7_days">Last 7 days</string>
+    <string name="cd_export_report">Export report</string>
+    <string name="weekly_chip_blocked">BLOCKED</string>
+    <string name="weekly_chip_allowed">ALLOWED</string>
+    <string name="weekly_chip_block_rate">BLOCK RATE</string>
+    <string name="weekly_detail_top_domain">Top blocked domain</string>
+    <string name="weekly_detail_most_targeted">Most targeted app</string>
+    <string name="weekly_detail_peak_hour">Peak threat hour</string>
+    <string name="weekly_badge_blocks_count">%1$d blocks</string>
+    <string name="time_am">AM</string>
+    <string name="time_pm">PM</string>
+    <string name="weekly_help_title">7-Day Privacy Report</string>
+    <string name="weekly_help_what_it_is">A summary of your firewall\'s activity over the last 7 days.</string>
+    <string name="weekly_help_what_it_does">It shows how many threats were blocked, how many connections were allowed, and your block rate (the share of traffic that was blocked).</string>
+    <string name="weekly_help_why">A single day does not always tell the full story. Looking at a week shows patterns, like which app or website keeps trying to reach you.</string>
+    <string name="weekly_help_benefit">You can spot repeat problem apps or websites and decide if you want to block them by hand.</string>
+    <string name="weekly_help_practice_1">Tap the download icon to save this report as a text file you can keep or share.</string>
+
+    <string name="timeline_title">24-Hour Activity</string>
+    <string name="legend_blocked">Blocked</string>
+    <string name="legend_allowed">Allowed</string>
+    <string name="timeline_24h_ago">24h ago</string>
+    <string name="timeline_12h_ago">12h ago</string>
+    <string name="timeline_now">Now</string>
+    <string name="timeline_help_title">24-Hour Activity Timeline</string>
+    <string name="timeline_help_what_it_is">A chart showing your firewall\'s activity hour by hour, for the last 24 hours.</string>
+    <string name="timeline_help_what_it_does">Each bar is one hour. Red shows blocked threats, cyan (light blue) shows normal allowed connections.</string>
+    <string name="timeline_help_why">Taller bars mean busier hours. This helps you see when your phone is most active, and when most threats were stopped.</string>
+    <string name="timeline_help_benefit">You can notice unusual spikes, for example if a lot of threats were blocked at a time you were not even using your phone.</string>
+
+    <string name="threat_prevention_help_title">Threat Prevention</string>
+    <string name="threat_prevention_help_what_it_is">This shows the three layers of protection working together to keep you safe.</string>
+    <string name="threat_prevention_help_what_it_does">\"Ad &amp; Tracker Blocking\" stops known ad and tracking websites. \"DNS Firewall\" checks every website address your phone tries to visit. \"Custom Domain Rules\" blocks any extra websites you added yourself.</string>
+    <string name="threat_prevention_help_why">Using more than one layer of protection catches more threats than relying on just one method.</string>
+    <string name="threat_prevention_help_benefit">Fewer ads, less tracking of your activity, and stronger protection against harmful websites.</string>
+    <string name="threat_prevention_help_practice_1">You can add your own websites to block from the Protect tab.</string>
+
+    <string name="recent_threats_help_title">Recent Blocked Threats</string>
+    <string name="recent_threats_help_what_it_is">A list of the newest harmful website addresses this app has stopped.</string>
+    <string name="recent_threats_help_what_it_does">Each row shows one blocked address, how many times it was tried, and that it came from the DNS Firewall.</string>
+    <string name="recent_threats_help_why">Seeing exactly what was blocked helps you understand what kind of threats your phone runs into.</string>
+    <string name="recent_threats_help_benefit">You can confirm the app is actively protecting you and see if any app on your phone is behaving suspiciously.</string>
+
+    <string name="active_apps_help_title">Most Active Apps</string>
+    <string name="active_apps_help_what_it_is">A list of the apps on your phone sending the most internet requests today.</string>
+    <string name="active_apps_help_what_it_does">It ranks apps by how many website or server addresses they looked up today, whether allowed or blocked.</string>
+    <string name="active_apps_help_why">Some apps use the internet far more than others, often without you realizing it.</string>
+    <string name="active_apps_help_benefit">You can spot an app using more data or making more connections than you expect, then check or block it from the Apps tab.</string>
+
+    <string name="export_toast_saved">Saved to Downloads/%1$s</string>
+    <string name="export_share_subject">TacU-NS Firewall — Privacy Report</string>
+    <string name="export_share_chooser">Share Report</string>
+    <string name="report_title_line">=== TacU-NS Firewall — 7-Day Privacy Report ===</string>
+    <string name="report_period">Period  : %1$s – %2$s</string>
+    <string name="report_summary_header">SUMMARY</string>
+    <string name="report_threats_blocked">Threats Blocked : %1$d</string>
+    <string name="report_connections">Connections     : %1$d</string>
+    <string name="report_block_rate">Block Rate      : %1$d%%</string>
+    <string name="report_top_threats_header">TOP THREATS</string>
+    <string name="report_most_blocked_domain">Most Blocked Domain : %1$s (%2$d×)</string>
+    <string name="report_most_targeted_app">Most Targeted App   : %1$s (%2$d blocks)</string>
+    <string name="report_peak_hour">Peak Threat Hour    : %1$s</string>
+    <string name="report_footer">Generated by TacU-NS Firewall</string>
+    <string name="report_no_data">No data</string>
+
+    <!-- Batch 2: Rules + App Block -->
+    <string name="rules_screen_title">FIREWALL RULES</string>
+    <string name="rules_subtitle">Geo, domain &amp; traffic blocking rules</string>
+    <string name="rules_active_label">active</string>
+    <string name="section_smart_suggestions">SMART SUGGESTIONS</string>
+    <string name="badge_x_new">%1$d new</string>
+    <string name="suggestions_help_title">Smart Suggestions</string>
+    <string name="suggestions_help_what_it_is">A list of websites your phone visits often, that you have not blocked yet.</string>
+    <string name="suggestions_help_what_it_does">The app looks at your recent traffic and suggests websites you may want to block, based on how often they show up.</string>
+    <string name="suggestions_help_why">Some websites (like ad networks or trackers) show up again and again without you noticing. This helps you find them.</string>
+    <string name="suggestions_help_benefit">You can block a suggested website with one tap, or dismiss it if you want to keep allowing it.</string>
+    <string name="suggestions_help_practice_1">Dismissing a suggestion just hides it from this list. It does not block or allow the website.</string>
+    <string name="section_geo_blocking">GEO BLOCKING</string>
+    <string name="badge_x_active">%1$d active</string>
+    <string name="geo_help_title">Geo Blocking</string>
+    <string name="geo_help_what_it_is">A way to block all websites that end in a specific country\'s web address, like \".ru\" or \".cn\".</string>
+    <string name="geo_help_what_it_does">Turning on a country blocks every website registered with that country\'s ending, all at once.</string>
+    <string name="geo_help_why">Some countries have a lot of scam or malware websites registered under their address ending.</string>
+    <string name="geo_help_benefit">One switch blocks a whole group of risky websites, instead of blocking them one at a time.</string>
+    <string name="geo_help_practice_1">This blocks by web address ending, not by where a server physically is. A safe, well-known website using one of these endings would also be blocked.</string>
+    <string name="section_domain_blocking">DOMAIN BLOCKING</string>
+    <string name="domain_help_title">Domain Blocking</string>
+    <string name="domain_help_what_it_is">A place to block or unblock any single website address yourself.</string>
+    <string name="domain_help_what_it_does">Type in a website address and tap Block. It will stop working on your phone until you unblock it.</string>
+    <string name="domain_help_why">Sometimes you know exactly which website you want to stop, like a distracting app\'s website or an unwanted service.</string>
+    <string name="domain_help_benefit">You get full, simple control over any specific website, beyond what blocklists or country blocking cover.</string>
+    <string name="domain_help_practice_1">Type the plain address, like \"example.com\", without \"https://\" or \"www.\".</string>
+    <string name="domain_help_practice_2">Blocking \"example.com\" also blocks every subdomain, like \"news.example.com\".</string>
+    <string name="section_scheduled_blocking">SCHEDULED BLOCKING</string>
+    <string name="schedule_badge_free">FREE · 1/1</string>
+    <string name="schedule_help_title">Scheduled Blocking</string>
+    <string name="schedule_help_what_it_is">A timer that blocks certain types of websites, only during set days and hours.</string>
+    <string name="schedule_help_what_it_does">Pick a category (like Social Media or Games), a time window, and which days it applies. During that window, those sites are blocked automatically.</string>
+    <string name="schedule_help_why">You may want to block distracting apps only during work hours or bedtime, not all day, every day.</string>
+    <string name="schedule_help_benefit">You get a hands-free way to build healthier habits, without having to remember to turn blocking on and off yourself.</string>
+    <string name="schedule_help_practice_1">\"FREE · 1/1\" means you can have 1 active schedule.</string>
+    <string name="section_import_export">IMPORT / EXPORT</string>
+    <string name="import_export_help_title">Import / Export Rules</string>
+    <string name="import_export_help_what_it_is">A way to save your block list to a file, or load one back in.</string>
+    <string name="import_export_help_what_it_does">Back Up All saves your domains, app rules, schedule and blocklist choices into one file. Restore reads that file and puts everything back.</string>
+    <string name="import_export_help_why">This lets you keep a backup of your settings, or move them to a new phone.</string>
+    <string name="import_export_help_benefit">You will not lose your setup if you switch phones or reinstall the app.</string>
+    <string name="import_export_help_practice_1">You can only use export or import a limited number of times per day, to keep the app running smoothly.</string>
+
+    <string name="appblock_title">APP CONTROL</string>
+    <string name="appblock_subtitle">Per-app internet access control</string>
+    <string name="appblock_blocked_label">blocked</string>
+    <string name="section_app_firewall_rules">APP FIREWALL RULES</string>
+    <string name="app_badges_help_title">App Badges</string>
+    <string name="app_badges_help_what_it_is">Small labels on each app that show its recent network activity at a glance.</string>
+    <string name="app_badges_help_what_it_does">Each app card can show up to six different badges, explained below.</string>
+    <string name="app_badges_help_why">These badges help you spot which apps are worth a closer look, without opening each one.</string>
+    <string name="app_badges_help_benefit">You can quickly find apps that may be using more data or behaving unusually, and decide whether to block them.</string>
+    <string name="app_badges_help_practice_1">Threats badge: how many harmful connections from this app were blocked in the last 7 days.</string>
+    <string name="app_badges_help_practice_2">Status badge (BLOCKED / PARTIAL / ALLOWED): whether this app is fully blocked, blocked on only Wi-Fi or only Data, or fully allowed.</string>
+    <string name="app_badges_help_practice_3">Rate badge (like \"12/min\"): how many website look-ups this app made per minute, recently.</string>
+    <string name="app_badges_help_practice_4">SPIKE badge: this app suddenly made far more connections than usual.</string>
+    <string name="app_badges_help_practice_5">BEACON badge: this app is contacting the same address again and again at steady time gaps, which can be a sign of tracking software.</string>
+    <string name="app_badges_help_practice_6">UPD badge: this app\'s traffic pattern changed noticeably after its last update.</string>
+    <string name="hint_tap_wifi_data">Tap Wi-Fi or Data button on any app to block it</string>
+    <string name="app_block_domain_scope_notice">When you block an app, the websites you blocked will open again. Activity logs also stop for your other apps. Unblock all apps to make both work again.</string>
+
+    <string name="domain_block_instruction">Block any domain across all apps instantly</string>
+    <string name="domain_input_hint">e.g. ads.example.com</string>
+    <string name="domain_test_action">Check if blocked</string>
+    <string name="domain_test_invalid">Enter a website address, like example.com.</string>
+    <string name="domain_test_not_blocked">%1$s is not blocked by any rule.</string>
+    <string name="domain_test_blocked_rule">%1$s is blocked by your rule for %2$s.</string>
+    <string name="domain_test_blocked_country">%1$s is blocked by your country rule (.%2$s).</string>
+    <string name="domain_test_blocked_list">%1$s is blocked by a blocklist you turned on.</string>
+    <string name="domain_test_blocked_schedule">%1$s is blocked by your schedule right now.</string>
+    <string name="domain_test_firewall_off">The firewall is off, so nothing is blocked right now.</string>
+    <string name="domain_test_app_block_note">While any app is blocked, website rules do not apply to your other apps.</string>
+    <string name="btn_block">Block</string>
+    <string name="label_blocked_domains">BLOCKED DOMAINS</string>
+    <string name="cd_unblock">Unblock %1$s</string>
+    <string name="cd_rename">Rename %1$s</string>
+    <string name="rename_domain_title">Rename domain</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_delete">Delete</string>
+    <string name="domains_selected">%1$d selected</string>
+
+    <string name="schedule_toggle_title">Block categories on a schedule</string>
+    <string name="schedule_toggle_subtitle">Starts and stops at the time you set</string>
+    <string name="label_category">CATEGORY</string>
+    <string name="schedule_cat_social">Social Media</string>
+    <string name="schedule_cat_streaming">Streaming</string>
+    <string name="schedule_cat_gaming">Gaming</string>
+    <string name="schedule_cat_news">News</string>
+    <string name="label_time_window">TIME WINDOW</string>
+    <string name="time_from">From</string>
+    <string name="time_until">Until</string>
+    <string name="label_active_days">ACTIVE DAYS</string>
+    <string name="schedule_day_mon">M</string>
+    <string name="schedule_day_tue">T</string>
+    <string name="schedule_day_wed">W</string>
+    <string name="schedule_day_thu">T</string>
+    <string name="schedule_day_fri">F</string>
+    <string name="schedule_day_sat">S</string>
+    <string name="schedule_day_sun">S</string>
+    <string name="schedule_status_disabled">Schedule disabled</string>
+    <string name="schedule_status_active">ACTIVE — blocking %1$s</string>
+    <string name="schedule_status_inactive">Inactive — check back at scheduled time</string>
+
+    <string name="import_export_backup_desc">Backup and restore your custom domain rules</string>
+    <string name="uses_remaining_badge">%1$d/2 today</string>
+    <string name="btn_export_rules">Back Up All</string>
+    <string name="btn_import_rules">Restore</string>
+    <string name="daily_limit_reached">Daily limit reached</string>
+    <string name="resets_in">Resets in %1$s</string>
+    <string name="time_hour_suffix">h</string>
+    <string name="time_min_suffix">m</string>
+    <string name="import_export_format_hint">Backup file: .json · older .txt domain lists can still be restored</string>
+    <string name="restore_undo">Undo last restore</string>
+    <string name="restore_undo_confirm_title">Undo the last restore?</string>
+    <string name="restore_undo_confirm_text">This removes the websites it added and puts back your earlier app rules, schedule and blocklist choices.</string>
+    <string name="restore_undone">Last restore undone.</string>
+    <string name="restore_undo_failed">Undo failed. Please try again.</string>
+    <string name="btn_undo">Undo</string>
+
+    <string name="search_apps_placeholder">Search applications…</string>
+    <string name="show_system_apps">Show system apps</string>
+    <string name="apps_tab_installed">Installed</string>
+    <string name="apps_tab_system">System</string>
+    <string name="show_system_apps_help_title">Installed and System Apps</string>
+    <string name="show_system_apps_help_what_it_is">A switch to show or hide built-in apps that came with your phone.</string>
+    <string name="show_system_apps_help_what_it_does">Tap Installed to see only the apps you installed. Tap System to see only the apps that came with your phone.</string>
+    <string name="show_system_apps_help_why">System apps rarely need to be blocked, so hiding them keeps your list short and easy to read.</string>
+    <string name="show_system_apps_help_benefit">Turn this on only if you need to block a specific built-in app, otherwise leave it off for a cleaner list.</string>
+
+    <plurals name="threats_blocked_7d">
+        <item quantity="one">%1$d threat blocked (7d)</item>
+        <item quantity="other">%1$d threats blocked (7d)</item>
+    </plurals>
+    <plurals name="rule_hits_recent">
+        <item quantity="one">Blocked %1$d time recently</item>
+        <item quantity="other">Blocked %1$d times recently</item>
+    </plurals>
+    <string name="status_partial">PARTIAL</string>
+    <string name="query_rate_per_min">%1$d/min</string>
+    <string name="spike_badge">SPIKE %1$d×</string>
+    <string name="beacon_badge">BEACON %1$s</string>
+    <string name="beacon_minutes">%1$dm</string>
+    <string name="beacon_seconds">%1$ds</string>
+    <string name="upd_badge">UPD %1$d×</string>
+    <string name="cd_purge">Purge %1$s</string>
+    <string name="toggle_wifi">Wi-Fi</string>
+    <string name="toggle_mobile_data">Mobile Data</string>
+    <string name="status_blocked_dot">● Blocked</string>
+    <string name="status_allowed_dot">○ Allowed</string>
+    <string name="hint_threats_blocked_7d">%1$d threats blocked · 7d</string>
+    <string name="hint_tap_to_inspect">Tap card to inspect DNS activity</string>
+    <string name="hint_view_dns_profile">View DNS profile →</string>
+
+    <string name="suggestions_card_title">Most active unblocked domains</string>
+    <string name="cd_dismiss">Dismiss</string>
+    <string name="show_less">Show less</string>
+    <string name="show_x_more">Show %1$d more</string>
+
+    <string name="profile_chip_queries">QUERIES</string>
+    <string name="profile_top_blocked">TOP BLOCKED  (7d)</string>
+    <string name="profile_top_allowed">TOP ALLOWED  (7d)</string>
+    <string name="profile_no_activity">No DNS activity recorded for this app (7d)</string>
+    <string name="profile_help_title">App Connection Profile</string>
+    <string name="profile_help_what_it_is">A detailed 7-day activity report for one single app.</string>
+    <string name="profile_help_what_it_does">QUERIES is the total number of website look-ups this app made. BLOCKED and ALLOWED show how many of those were stopped or let through. BLOCK RATE is the percentage that were blocked. Below that, you can see the specific websites this app tried to reach the most.</string>
+    <string name="profile_help_why">This helps you understand exactly what one app is doing on the internet, not just a summary.</string>
+    <string name="profile_help_benefit">If an app looks suspicious, you can check exactly which websites it is contacting before deciding to block it.</string>
+
+    <string name="geo_card_instruction">Block all domains by country TLD</string>
+    <string name="geo_country_china">China</string>
+    <string name="geo_country_russia">Russia</string>
+    <string name="geo_country_iran">Iran</string>
+    <string name="geo_country_north_korea">North Korea</string>
+    <string name="geo_country_belarus">Belarus</string>
+    <string name="geo_country_nigeria">Nigeria</string>
+
+    <!-- Batch 3: Logs -->
+    <string name="logs_header_title">FIREWALL LOGS</string>
+    <string name="logs_header_subtitle">Event-based · No packet inspection</string>
+    <string name="logs_events_badge">%1$d events</string>
+    <string name="logs_help_title">Firewall Logs</string>
+    <string name="logs_help_what_it_is">A record of every website address your phone has tried to reach.</string>
+    <string name="logs_help_what_it_does">\"Event-based\" means the app only records which website address was contacted and whether it was blocked or allowed. \"No packet inspection\" means it does not read or store the actual content of your messages, photos, or browsing.</string>
+    <string name="logs_help_why">This gives you a clear activity history while still respecting your privacy.</string>
+    <string name="logs_help_benefit">You can see exactly what was blocked or allowed, with the confidence that your private content was never read or stored.</string>
+    <string name="clear_logs_confirm_title">Clear all logs?</string>
+    <string name="clear_logs_confirm_text">This permanently deletes your activity history on this device. It can\'t be undone.</string>
+    <string name="logs_filter_all">All</string>
+    <string name="logs_filter_blocked">Blocked</string>
+    <string name="logs_filter_allowed">Allowed</string>
+    <string name="section_recent_activity">RECENT ACTIVITY</string>
+    <string name="log_badges_help_title">Log Badges</string>
+    <string name="log_badges_help_what_it_is">Small labels that appear next to a blocked or allowed website in your logs.</string>
+    <string name="log_badges_help_what_it_does">Each badge is explained below.</string>
+    <string name="log_badges_help_why">These badges tell you quickly why a website was flagged, without needing to look it up yourself.</string>
+    <string name="log_badges_help_benefit">You can understand what kind of risk was stopped, and feel confident the app is protecting you correctly.</string>
+    <string name="log_badges_help_practice_1">Threat label (like \"AD/TRACKER\"): the category of harm this website is known for.</string>
+    <string name="log_badges_help_practice_2">DGA?: this website\'s address looks randomly generated by a computer, a common trick used by malware to hide.</string>
+    <string name="log_badges_help_practice_3">TUNNEL?: this app may be using website look-ups to sneak data in or out, bypassing normal traffic rules.</string>
+    <string name="log_badges_help_practice_4">Category badge: for allowed websites, shows what type of website it is, such as social media or ads.</string>
+    <string name="log_badges_help_practice_5">A \"≈ domain.com\" badge means this address looks a lot like a well-known site you trust — it could be a scam trying to trick you into typing your password on a fake page.</string>
+    <string name="time_just_now">Just now</string>
+    <string name="time_min_ago">%1$d min ago</string>
+    <string name="time_hr_ago">%1$d hr ago</string>
+    <string name="log_unknown_app">Unknown</string>
+    <string name="log_unknown_domain">unknown</string>
+    <string name="cd_view_details">View details</string>
+    <string name="badge_dga">DGA?</string>
+    <string name="badge_tunnel">TUNNEL?</string>
+    <string name="badge_lookalike_prefix">≈ %1$s</string>
+    <string name="threat_ad_tracker">AD/TRACKER</string>
+    <string name="threat_user_block">USER BLOCK</string>
+    <string name="threat_schedule">SCHEDULE</string>
+    <string name="logs_clear_action">Clear logs</string>
+    <string name="category_crash_rpt">CRASH RPT</string>
+    <string name="category_analytics">ANALYTICS</string>
+    <string name="category_social">SOCIAL</string>
+    <string name="category_cdn">CDN</string>
+    <string name="category_telemetry">TELEMETRY</string>
+    <string name="category_google">GOOGLE</string>
+    <string name="logs_connections_count">%1$d connections</string>
+    <string name="logs_empty_title">No activity yet</string>
+    <string name="logs_empty_subtitle">Enable VPN to start capturing events</string>
+
+    <!-- Batch 3: Map -->
+    <string name="section_geo_threat_map">CONNECTIONS BY COUNTRY · TODAY</string>
+    <string name="section_top_blocked_domains">TOP BLOCKED DOMAINS · TODAY</string>
+    <string name="geo_map_help_title">Connections by country</string>
+    <string name="geo_map_help_what_it_is">A world map showing where the websites your phone contacts are located.</string>
+    <string name="geo_map_help_what_it_does">The dot in the middle is your phone. Each line goes to the country of a server used by a website your apps opened today. Bigger dots mean more visits. Blocked websites are not on the map: they were stopped before any server was reached.</string>
+    <string name="geo_map_help_why">It gives you a simple picture of where your phone\'s internet connections go.</string>
+    <string name="geo_map_help_benefit">You can spot if your phone is unexpectedly contacting a country you do not recognize.</string>
+    <string name="geo_map_help_practice_1">Big websites often use a server close to you, so the country shown is usually where the server is, not where the company is. The map only shows real activity from today.</string>
+    <string name="top_blocked_help_title">Top Blocked Domains</string>
+    <string name="top_blocked_help_what_it_is">A list of the websites blocked the most times today.</string>
+    <string name="top_blocked_help_what_it_does">Each row shows a website and how many times it was blocked today. Blocked websites have no server location, because they were stopped before connecting.</string>
+    <string name="top_blocked_help_why">Seeing which websites are blocked most often shows you what keeps trying to reach your phone.</string>
+    <string name="top_blocked_help_benefit">You can notice if one website or tracker is unusually persistent, and decide if it needs extra attention.</string>
+    <string name="map_header_title">NETWORK MAP</string>
+    <string name="map_header_subtitle">Where today\'s allowed websites connected</string>
+    <string name="map_blocked_no_server">Stopped before connecting</string>
+    <string name="map_empty_today">No connections yet today</string>
+    <string name="legend_allowed_traffic">Allowed traffic</string>
+    <string name="legend_your_device">Your device</string>
+    <string name="map_domains_empty_title">No blocked domains yet</string>
+    <string name="map_domains_empty_subtitle">Enable VPN protection to start tracking DNS activity</string>
+
+    <!-- Batch 3: Settings -->
+    <string name="settings_header_title">SETTINGS</string>
+    <string name="settings_header_subtitle">Firewall configuration</string>
+    <string name="section_protection">PROTECTION</string>
+    <string name="section_blocklists">BLOCKLISTS</string>
+    <string name="section_privacy">PRIVACY</string>
+    <string name="section_privacy_security">PRIVACY &amp; SECURITY</string>
+    <string name="section_about">ABOUT</string>
+    <string name="settings_language_title">Language</string>
+    <string name="settings_language_subtitle">Choose your app display language</string>
+    <string name="settings_permissions_title">App Permissions</string>
+    <string name="settings_permissions_subtitle">What this app can access, and why</string>
+    <string name="settings_vpn_privacy_title">VPN &amp; Network Privacy</string>
+    <string name="settings_vpn_privacy_subtitle">How the firewall connection works</string>
+    <string name="settings_data_safety_title">Data Safety</string>
+    <string name="settings_data_safety_subtitle">What\'s stored, and what never leaves your device</string>
+    <string name="settings_privacy_dashboard_title">Privacy Dashboard</string>
+    <string name="settings_privacy_dashboard_subtitle">A live snapshot of your local data</string>
+    <string name="settings_security_checklist_title">Security Checklist</string>
+    <string name="settings_security_checklist_subtitle">5 quick checks on your current protection</string>
+    <string name="boot_on_start_title">Boot on Start</string>
+    <string name="boot_on_start_subtitle">Restart firewall after device reboot</string>
+    <string name="app_lock_setting_title">App Lock</string>
+    <string name="app_lock_manage_title">App Lock Accounts</string>
+    <string name="app_lock_manage_subtitle">%1$d of %2$d accounts</string>
+    <string name="app_lock_verify_title">Confirm it is you</string>
+    <string name="app_lock_verify_desc">Enter any App Lock username and password to manage accounts.</string>
+    <string name="app_lock_add_title">Add account</string>
+    <string name="app_lock_change">Change</string>
+    <string name="app_lock_change_title">Change username or password</string>
+    <string name="app_lock_remove">Remove</string>
+    <string name="app_lock_current_password">Current password</string>
+    <string name="app_lock_error_last_user">You cannot remove the only account</string>
+    <string name="app_lock_error_generic">Could not save. Check your details and try again.</string>
+    <string name="app_lock_max_users">Maximum %1$d accounts</string>
+    <string name="app_lock_view_only_label">View only</string>
+    <string name="app_lock_view_only_desc">View-only accounts can see everything but cannot change rules or turn the firewall off.</string>
+    <string name="app_lock_view_only_badge">VIEW ONLY</string>
+    <string name="app_lock_view_only_denied">This account can only view. Sign in with an owner account to make changes.</string>
+    <string name="app_lock_error_last_full">At least one account must be able to make changes.</string>
+    <string name="app_lock_role_full">Full access</string>
+    <string name="app_lock_role_tip_title">Choose what this account can do</string>
+    <string name="app_lock_role_tip_text">New accounts have full access and can change rules and settings. Tap “Full access” next to an account to make it view only. View-only accounts can see everything but cannot change rules or turn the firewall off.</string>
+    <string name="cd_show_password">Show password</string>
+    <string name="cd_hide_password">Hide password</string>
+    <string name="app_lock_rule_length">%1$s to %2$s characters</string>
+    <string name="app_lock_rule_upper">An uppercase letter (A–Z)</string>
+    <string name="app_lock_rule_lower">A lowercase letter (a–z)</string>
+    <string name="app_lock_rule_number">A number (0–9)</string>
+    <string name="app_lock_rule_symbol">A symbol, such as ! @ # ?</string>
+    <string name="app_lock_username">Username</string>
+    <string name="app_lock_enter_username">Enter your username</string>
+    <string name="app_lock_error_credentials">Wrong username or password</string>
+    <string name="app_lock_error_locked">Too many wrong tries. Try again in %1$s.</string>
+    <string name="app_lock_forgot">Forgot your username or password?</string>
+    <string name="app_lock_recovery_title">Reset App Lock</string>
+    <string name="app_lock_recovery_desc">Answer your security question, or enter your recovery code.</string>
+    <string name="app_lock_recovery_or">or</string>
+    <string name="app_lock_recovery_code_label">Recovery code</string>
+    <string name="app_lock_error_recovery">That answer and code did not match</string>
+    <string name="app_lock_btn_verify">Verify</string>
+    <string name="app_lock_security_question">Security question</string>
+    <string name="app_lock_security_answer">Answer</string>
+    <string name="app_lock_security_question_desc">Write a question only you can answer. You need it if you forget your password.</string>
+    <string name="app_lock_code_title">Save your recovery code</string>
+    <string name="app_lock_code_desc">Write this down and keep it safe. It is shown only once, and it can unlock the app if you forget everything else.</string>
+    <string name="app_lock_code_confirm">I have written down this code</string>
+    <string name="app_lock_btn_done">Done</string>
+    <string name="app_lock_help_title">App Lock</string>
+    <string name="app_lock_help_what_it_is">A username and password that protect the app itself, so other people cannot change your firewall settings.</string>
+    <string name="app_lock_help_what_it_does">When it is on, the app asks for your username and password each time you open it. Your firewall keeps running and keeps blocking while the app is locked.</string>
+    <string name="app_lock_help_why">Anyone holding your unlocked phone could otherwise turn your protection off or delete your rules.</string>
+    <string name="app_lock_help_benefit">Your password is never saved. Only a scrambled fingerprint of it is kept on this phone, and it is never uploaded anywhere.</string>
+    <string name="app_lock_help_practice_1">Use 8 or more characters with an uppercase letter, a lowercase letter, a number and a symbol.</string>
+    <string name="app_lock_help_practice_2">Write down your recovery code. It is shown only once and it is the safest way back in.</string>
+    <string name="app_lock_help_practice_3">Also make a backup from the Protect tab. If you lose both, clearing app data is the only way in, and the backup restores your rules.</string>
+    <string name="app_lock_set_title">Create password</string>
+    <string name="app_lock_new_password">New password</string>
+    <string name="app_lock_confirm_password">Confirm password</string>
+    <string name="app_lock_error_mismatch">Passwords do not match</string>
+    <string name="app_lock_enter_password">Enter your password</string>
+    <string name="app_lock_setting_subtitle">Ask for your password before opening this app</string>
+    <string name="app_lock_title">App Locked</string>
+    <string name="app_lock_subtitle">Enter your username and password to manage your firewall. Protection keeps running while locked.</string>
+    <string name="app_lock_unlock">Unlock</string>
+    <string name="boot_on_start_help_title">Boot on Start</string>
+    <string name="boot_on_start_help_what_it_is">This turns the firewall back on by itself after your phone restarts.</string>
+    <string name="boot_on_start_help_what_it_does">When your phone turns back on, this app starts protecting you again right away.</string>
+    <string name="boot_on_start_help_why">Without this, your phone would have no protection until you open the app and turn it on yourself.</string>
+    <string name="boot_on_start_help_benefit">You stay protected all the time, even right after a restart, without having to remember to turn it back on.</string>
+    <string name="boot_on_start_help_practice_1">Keep this switched on so you are never left unprotected after a restart.</string>
+    <string name="ondevice_only_title">On-Device Only</string>
+    <string name="ondevice_only_body">TacU-NS Firewall stores rules and logs on device only. No user account is required.</string>
+    <string name="ondevice_only_help_title">On-Device Only</string>
+    <string name="ondevice_only_help_what_it_is">This tells you where your firewall data is kept.</string>
+    <string name="ondevice_only_help_what_it_does">All your rules and activity logs stay on your phone. Nothing is sent to a company server.</string>
+    <string name="ondevice_only_help_why">Some apps send your data to the internet to work. This app does not need to do that.</string>
+    <string name="ondevice_only_help_benefit">Your browsing history and app activity stay private, on your own device, at all times.</string>
+    <string name="ondevice_only_help_practice_1">You do not need to sign up or log in to use this app.</string>
+    <string name="ondevice_only_help_practice_2">If you uninstall the app, your logs are removed with it.</string>
+    <string name="vpn_disclosure_title">VPN Disclosure</string>
+    <string name="vpn_disclosure_body">Uses Android VpnService for local traffic handling. Blocked domains are rejected on-device. Allowed DNS queries are forwarded to the DNS server set in Settings › DNS (by default Google Public DNS 8.8.8.8, or Cloudflare 1.1.1.1 if Google does not answer).</string>
+    <string name="vpn_disclosure_help_title">VPN Disclosure</string>
+    <string name="vpn_disclosure_help_what_it_is">This explains why Android asks you to trust a \"VPN\" for this app.</string>
+    <string name="vpn_disclosure_help_what_it_does">Android only lets an app filter internet traffic without root access if it uses a VPN connection. This app uses that connection only on your phone — it does not send your traffic to a remote server like a normal VPN does.</string>
+    <string name="vpn_disclosure_help_why">Blocked websites are stopped right on your phone. Only the lookups needed to find a website are sent to the DNS server set in Settings › DNS (Google Public DNS 8.8.8.8 by default), so your phone knows where to connect.</string>
+    <string name="vpn_disclosure_help_benefit">You get ad and threat blocking without needing to root your phone, and without a company routing all your traffic through their servers.</string>
+    <string name="vpn_disclosure_help_practice_1">The \"VPN\" icon you see in Android\'s status bar is normal and expected while this app is protecting you.</string>
+    <string name="about_version_prefix">Version %1$s</string>
+    <string name="about_badge_no_root">No Root Required</string>
+    <string name="about_badge_local_only">Local Only</string>
+    <string name="about_badge_dns_firewall">DNS Firewall</string>
+    <string name="about_privacy_policy">Privacy Policy</string>
+    <string name="about_open_source_notices">Open Source Notices</string>
+    <string name="license_mit">MIT License</string>
+    <string name="license_pddl_country">PDDL 1.0 — Public-domain IP-to-country data, built from internet registry and routing records</string>
+    <string name="btn_close">Close</string>
+    <string name="blocklist_manage_title">Manage Blocklists</string>
+    <string name="blocklist_manage_subtitle">Community ad and malware block lists</string>
+
+    <!-- Batch 3: Settings sub-screens -->
+    <string name="perm_intro">This app asks for %1$d permissions on your device. Here is exactly what each one is for — no permission is used for anything beyond what\'s listed below.</string>
+    <string name="perm_default_reason">Used to support existing app features.</string>
+    <string name="perm_manage_system_settings">Manage in system settings</string>
+    <string name="perm_foreground_service_name">Run in the foreground</string>
+    <string name="perm_foreground_service_why">Lets the firewall keep protecting you while you use other apps, instead of stopping the moment you leave this screen.</string>
+    <string name="perm_foreground_service_special_name">VPN foreground service</string>
+    <string name="perm_foreground_service_special_why">Tells Android this app\'s background service is a VPN-type connection, which is the only way to filter traffic without root access.</string>
+    <string name="perm_post_notifications_name">Show a status notification</string>
+    <string name="perm_post_notifications_why">Shows a small, silent notification while the firewall is on, so you always know it is running and can stop it in one tap.</string>
+    <string name="perm_internet_name">Use the internet</string>
+    <string name="perm_internet_why">Needed to look up website addresses (DNS) and to download the block lists that power ad and threat blocking.</string>
+    <string name="perm_network_state_name">Check network status</string>
+    <string name="perm_network_state_why">Lets the app tell whether you\'re on Wi-Fi or mobile data, so per-network blocking rules apply to the right connection.</string>
+    <string name="perm_boot_completed_name">Start after restart</string>
+    <string name="perm_boot_completed_why">Only used if you turn on \"Boot on Start\" — lets the firewall come back on automatically after your phone restarts.</string>
+    <string name="perm_query_all_packages_name">See your list of installed apps</string>
+    <string name="perm_query_all_packages_why">Needed to show the App Block list and let you choose which apps to block, by name and icon.</string>
+
+    <string name="vpn_conn_works_title">How the VPN connection works</string>
+    <string name="vpn_conn_works_body">Android only allows an app to check your internet traffic — without root access — if it uses a VPN-style connection. This app\'s VPN runs entirely on your phone. It does not send your traffic to any outside server, the way a normal VPN service would.</string>
+    <string name="vpn_data_leaves_title">What actually leaves your device</string>
+    <string name="vpn_data_leaves_body">Only one thing: when your phone looks up a website\'s address, that lookup is sent to the DNS server set in Settings › DNS so it can be resolved. By default that is Google Public DNS (8.8.8.8), and Cloudflare (1.1.1.1) only if Google does not answer. The content of your browsing, messages, or app data is never sent anywhere by this app.</string>
+    <string name="vpn_blocked_never_title">Blocked sites never connect at all</string>
+    <string name="vpn_blocked_never_body">When a website is on your block list, this app answers the look-up itself and says the website doesn\'t exist. Your phone never even attempts to connect to it.</string>
+    <string name="blocklist_downloads_active">Block-list downloads currently active</string>
+    <string name="blocklist_none_enabled">No block list is enabled yet.</string>
+    <string name="blocklist_download_note">Each source is downloaded directly from the addresses above, on the schedule you control in Blocklist Management — never through a server run by this app.</string>
+
+    <string name="data_safety_banner_title">No account. No ads or analytics. Nothing is sold.</string>
+    <string name="data_safety_banner_subtitle">Website lookups are sent to the DNS server set in Settings › DNS (by default Google Public DNS 8.8.8.8, or Cloudflare 1.1.1.1 if Google does not answer) to find where sites are. Blocklists are downloaded from their public websites.</string>
+    <string name="data_safety_stored_header">WHAT\'S STORED ON YOUR DEVICE</string>
+    <string name="data_safety_never_header">WHAT NEVER LEAVES YOUR DEVICE</string>
+    <string name="data_safety_rules_title">Your block and allow rules</string>
+    <string name="data_safety_rules_body">The domains and apps you\'ve chosen to block or allow, stored only in this app\'s private database.</string>
+    <string name="data_safety_logs_title">Connection activity logs</string>
+    <string name="data_safety_logs_body">A record of which websites were blocked or allowed, kept locally so the Logs and Map tabs can show your history.</string>
+    <string name="data_safety_prefs_title">Your app preferences</string>
+    <string name="data_safety_prefs_body">Things like whether Boot on Start is enabled, stored locally using Android\'s DataStore.</string>
+    <string name="data_safety_noaccount_title">No account, no sign-in</string>
+    <string name="data_safety_noaccount_body">This app has no login of any kind, so there is no personal account data to protect or lose.</string>
+    <string name="data_safety_noanalytics_title">No analytics, no ads, no trackers</string>
+    <string name="data_safety_noanalytics_body">This app contains no analytics or advertising software, so nothing about your usage is measured or sold.</string>
+    <string name="data_safety_background_title">Runs even without internet in the background</string>
+    <string name="data_safety_background_body">The persistent notification you see is required by Android for any VPN-type app — it lets you stop protection in one tap, and does not mean data is being sent out.</string>
+
+    <string name="privacy_dashboard_intro">This is exactly what this app currently holds about your activity — read directly from its on-device database, right now.</string>
+    <string name="stat_custom_rules">CUSTOM RULES</string>
+    <string name="stat_blocklist_domains">BLOCK-LIST DOMAINS</string>
+    <string name="stat_blocked_today">BLOCKED TODAY</string>
+    <string name="stat_allowed_today">ALLOWED TODAY</string>
+    <string name="stat_total_logged_events">TOTAL LOGGED EVENTS (ALL TIME)</string>
+    <string name="btn_export_snapshot">Export this snapshot</string>
+    <string name="export_report_header">=== TacU-NS Firewall — Privacy Dashboard Snapshot ===</string>
+    <string name="export_report_generated">Generated: %1$s</string>
+    <string name="export_report_custom_rules">Custom domain rules you\'ve added : %1$d</string>
+    <string name="export_report_blocklist_domains">Block-list domains loaded         : %1$d</string>
+    <string name="export_report_total_logged">Total logged events (all time)    : %1$d</string>
+    <string name="export_report_blocked_today">Blocked today                     : %1$d</string>
+    <string name="export_report_allowed_today">Allowed today                      : %1$d</string>
+    <string name="export_report_footer">All of this data is stored only on this device. Nothing above was ever sent anywhere.</string>
+    <string name="privacy_snapshot_toast_saved">Saved to Downloads/%1$s</string>
+    <string name="privacy_snapshot_share_subject">TacU-NS Firewall — Privacy Dashboard Snapshot</string>
+    <string name="export_share_chooser_title">Share Snapshot</string>
+
+    <string name="blocklist_screen_title">Blocklist Management</string>
+    <string name="blocklist_info_banner">Active blocklists are loaded into memory when the VPN starts. Changes take effect on the next VPN start or immediately if already running.</string>
+    <string name="blocklist_attribution">The built-in list is the StevenBlack hosts list (MIT license), maintained by community contributors.</string>
+    <string name="blocklist_pro_snackbar">This list is locked in this version</string>
+    <string name="section_community_blocklists">Community Blocklists</string>
+    <string name="blocklist_active_count">Active: %1$d of %2$d</string>
+    <string name="blocklist_card_help_title">Community Blocklists</string>
+    <string name="blocklist_card_help_what_it_is">A blocklist is a list of known bad websites, made by security researchers and shared for free.</string>
+    <string name="blocklist_card_help_what_it_does">Turning one on stops your phone from connecting to every website on that list — mostly ads, trackers, and scam sites.</string>
+    <string name="blocklist_card_help_why">One list alone cannot catch everything. Using more than one list together catches more ads and threats.</string>
+    <string name="blocklist_card_help_benefit">Faster browsing with fewer ads, and less chance of accidentally visiting a harmful website.</string>
+    <string name="blocklist_card_help_practice_1">This list is free and works straight away. You can add your own lists in the card below.</string>
+    <string name="blocklist_card_help_practice_2">Tap Refresh on a list to download its newest version.</string>
+    <string name="blocklist_card_help_practice_3">Use the switch to turn a list off. Its domains are unblocked until you turn it back on.</string>
+    <string name="badge_pro">PRO</string>
+    <string name="badge_free">FREE</string>
+    <string name="cd_pro_locked">PRO locked</string>
+    <string name="cd_refresh">Refresh</string>
+    <string name="blocklist_stats_pending">Pending download</string>
+    <string name="blocklist_stats_not_downloaded">Not downloaded</string>
+    <string name="blocklist_stats_domains_age">%1$s domains · %2$s</string>
+    <string name="btn_refresh_active_blocklists">Refresh Active Blocklists</string>
+    <string name="age_never">never</string>
+    <string name="age_updated_just_now">updated just now</string>
+    <string name="age_updated_min_ago">updated %1$dm ago</string>
+    <string name="age_updated_hr_ago">updated %1$dh ago</string>
+    <string name="age_updated_day_ago">updated %1$dd ago</string>
+    <string name="age_updated_week_ago">updated %1$dw ago</string>
+
+    <!-- First-launch intro -->
+    <string name="intro_tagline">Simple, private control over your internet</string>
+    <string name="intro_benefit_block_title">Block ads and harmful sites</string>
+    <string name="intro_benefit_block_desc">Unwanted sites are stopped before they load.</string>
+    <string name="intro_benefit_apps_title">Choose what each app can use</string>
+    <string name="intro_benefit_apps_desc">Allow or block Wi-Fi and mobile data for each app.</string>
+    <string name="intro_benefit_private_title">Stays on your phone</string>
+    <string name="intro_benefit_private_desc">No account needed. Rules and logs are kept on your device.</string>
+    <string name="intro_vpn_note">Android will ask for VPN permission when you turn protection on.</string>
+    <string name="intro_accept">Accept and continue</string>
+    <string name="domain_block_delay_note">Sites you opened recently can take about a minute to be blocked.</string>
+    <!-- Your own blocklists -->
+    <string name="blocklist_custom_title">Your own lists</string>
+    <string name="blocklist_custom_subtitle">Add a blocklist link you trust · %1$s of %2$s</string>
+    <string name="blocklist_custom_add">Add a list</string>
+    <string name="blocklist_custom_max">You can add up to %1$s lists</string>
+    <string name="blocklist_custom_tip">Only add links from sources you trust. Works with hosts files, plain domain lists and AdBlock-style lists.</string>
+    <string name="blocklist_custom_dialog_title">Add a blocklist</string>
+    <string name="blocklist_custom_name">Name (optional)</string>
+    <string name="blocklist_custom_url">List link</string>
+    <string name="blocklist_custom_err_link">Enter a web link that starts with https:// or http://</string>
+    <string name="blocklist_custom_err_duplicate">This list is already added</string>
+    <string name="blocklist_custom_remove_title">Remove this list?</string>
+    <string name="blocklist_custom_remove_text">Sites that only this list blocks will open again.</string>
+    <string name="blocklist_custom_error_http">Could not download: the link returned an error</string>
+    <string name="blocklist_custom_error_network">Could not download: check your internet connection</string>
+    <string name="blocklist_custom_error_too_large">This list is too big to use</string>
+    <string name="blocklist_custom_error_empty">No domains were found at this link</string>
+    <string name="cd_remove_list">Remove %1$s</string>
+    <string name="blocklist_custom_empty">No lists added yet</string>
+    <!-- Group 3: allow list, watch-only, look-alike, safe search -->
+    <string name="allow_title">Always allow</string>
+    <string name="allow_subtitle">Sites here are never blocked by blocklists, schedules or look-alike checks.</string>
+    <string name="allow_button">Allow</string>
+    <string name="allow_empty">No sites added yet</string>
+    <string name="domain_test_allowed">%1$s is on your Always allow list, so it is not blocked</string>
+    <string name="domain_test_watch_only">Watch-only mode is on, so websites are not blocked right now.</string>
+    <string name="extra_protection_title">Extra protection</string>
+    <string name="watch_only_title">Watch-only mode</string>
+    <string name="watch_only_desc">Blocks no websites. Logs mark what would have been blocked, so you can test rules safely.</string>
+    <string name="lookalike_block_title">Block look-alike sites</string>
+    <string name="lookalike_block_desc">Stops fake sites whose names copy sites you use, like paypa1.com.</string>
+    <string name="safe_search_title">Safe search</string>
+    <string name="safe_search_desc">Hides adult results on Google, Bing and DuckDuckGo. Takes about a minute to start.</string>
+    <string name="watch_only_badge">WATCH ONLY</string>
+    <string name="threat_lookalike">LOOK-ALIKE</string>
+    <string name="threat_would_block">WOULD BLOCK</string>
+    <!-- Security notifications -->
+    <string name="notif_scam_blocked_title">Scam website blocked</string>
+    <string name="notif_scam_warning_title">Possible scam website</string>
+    <string name="notif_scam_body">%1$s looks a lot like %2$s. It could be a fake site made to steal your password.</string>
+    <string name="notif_scam_tap">Tap to see it in Activity.</string>
+    <string name="notif_channel_alerts">Security alerts</string>
+    <string name="notif_channel_alerts_desc">Warns you when a website looks like a fake copy of a site you trust</string>
+    <string name="notif_channel_summary">Daily security summary</string>
+    <string name="notif_channel_summary_desc">A once-a-day summary of what your firewall blocked</string>
+    <string name="notif_summary_blocked_title">Threats blocked today: %1$s</string>
+    <string name="notif_summary_blocked_body">Your firewall stopped harmful connections today. Tap to see the details.</string>
+    <string name="notif_summary_clear_title">Your phone was protected today</string>
+    <string name="notif_summary_clear_body">Nothing needed blocking today. Your firewall was on the whole time.</string>
+    <!-- Always-on VPN and protection restore -->
+    <string name="always_on_title">Keep protection always on</string>
+    <string name="always_on_desc">Android can stop the firewall, for example when you turn off this app\'s notifications. Turn on Always-on VPN so Android starts it again by itself. Leave Block connections without VPN off.</string>
+    <string name="always_on_button">Open VPN settings</string>
+    <string name="protection_restored">Protection was stopped by Android and is back on.</string>
+    <string name="rules_lost_title">Your firewall rules were reset</string>
+    <string name="rules_lost_body">The phone storage that held your rules was damaged, so they were cleared. To get them back, restore your backup file on the %1$s tab.</string>
+    <string name="rules_lost_dismiss">Got it</string>
+    <!-- Change history -->
+    <string name="ch_title">Change history</string>
+    <string name="ch_settings_desc">Every rule and setting change, with what it was before</string>
+    <string name="ch_empty_title">No changes yet</string>
+    <string name="ch_empty_body">When you block a website, change an app rule or change a setting, it shows here.</string>
+    <string name="ch_clear">Clear history</string>
+    <string name="ch_clear_confirm_title">Clear change history?</string>
+    <string name="ch_clear_confirm_body">The list of past changes is deleted. Your rules and settings are not changed.</string>
+    <string name="ch_act_domain_blocked">Website blocked</string>
+    <string name="ch_act_domain_unblocked">Website unblocked</string>
+    <string name="ch_act_domain_renamed">Website name corrected</string>
+    <string name="ch_act_app_policy">App rule changed</string>
+    <string name="ch_act_schedule">Schedule changed</string>
+    <string name="ch_act_blocklist">Blocklist changed</string>
+    <string name="ch_act_rules_imported">Rules imported</string>
+    <string name="ch_act_backup_restored">Backup restored</string>
+    <string name="ch_val_allowed">Allowed</string>
+    <string name="ch_val_blocked">Blocked</string>
+    <string name="ch_val_on">On</string>
+    <string name="ch_val_off">Off</string>
+    <string name="ch_rules_added">%1$s rules added</string>
+
+    <!-- Activity history retention (F1) -->
+    <string name="log_retention_title">Activity history</string>
+    <string name="log_retention_subtitle">Choose how long this phone keeps your activity list.</string>
+    <string name="log_retention_off">Keep nothing</string>
+    <string name="log_retention_6h">Last 6 hours</string>
+    <string name="log_retention_24h">Last 24 hours</string>
+    <string name="log_retention_7d">Last 7 days</string>
+    <string name="log_retention_30d">Last 30 days</string>
+    <string name="log_retention_off_hint">Nothing is recorded, and the history already stored is deleted.</string>
+    <string name="log_retention_reading">Reading…</string>
+    <string name="log_retention_stats">Entries kept: %1$d, using %2$s on this device.</string>
+    <string name="log_retention_stats_off">No activity history is stored on this device.</string>
+    <string name="log_retention_stats_empty">Nothing recorded yet.</string>
+    <string name="log_retention_off_confirm_title">Keep no history?</string>
+    <string name="log_retention_off_confirm_body">The firewall keeps protecting you, but it stops recording activity and the history already on this phone is deleted now. Reports and the security score will have less to work with.</string>
+    <string name="log_retention_off_confirm_yes">Turn off and delete</string>
+    <string name="log_retention_help_title">Activity history</string>
+    <string name="log_retention_help_what_it_is">How long this phone keeps the list of which app looked up which website.</string>
+    <string name="log_retention_help_what_it_does">Older entries are deleted automatically. “Keep nothing” stops the recording completely and clears what is stored.</string>
+    <string name="log_retention_help_why">The list used to hold only the last 500 entries, which on a busy phone is a couple of hours. Reports, the security score and the “blocked recently” counts all read this list.</string>
+    <string name="log_retention_help_benefit">You decide the balance between useful reports and keeping less of your own history.</string>
+    <string name="log_retention_help_practice_1">A longer window makes the weekly report and the app risk figures more accurate.</string>
+    <string name="log_retention_help_practice_2">The history never leaves this phone, whichever window you choose.</string>
+    <string name="logs_empty_off_title">History is switched off</string>
+    <string name="logs_empty_off_subtitle">The firewall is still protecting you. Turn on Activity history in Settings to see the list.</string>
+
+    <!-- Self-protection and app-block label (F11 / P12) -->
+    <string name="threat_app_blocked">APP BLOCKED</string>
+    <string name="app_self_protected">Always online, so blocklists keep updating. The firewall cannot block itself.</string>
+
+    <!-- DNS settings, Safe Search YouTube switch -->
+    <string name="dns_settings_title">DNS</string>
+    <string name="dns_subtitle">Choose where the firewall sends the website lookups it allows. Blocking always happens on your phone first.</string>
+    <string name="dns_row_subtitle">Main and backup server for website lookups</string>
+    <string name="dns_status_title">Now in use</string>
+    <string name="dns_status_vpn_off">Protection is off. The DNS choice takes effect when protection is on.</string>
+    <string name="dns_status_waiting">Waiting for the next website lookup…</string>
+    <string name="dns_status_main">Main server answering (%1$s)</string>
+    <string name="dns_status_backup">Main server not answering. Using your backup (%1$s).</string>
+    <string name="dns_status_failing">No DNS server is answering, so websites cannot load.</string>
+    <string name="dns_status_failing_no_backup">Main server not answering and no backup is set, so websites cannot load. Choose a backup below if you want the firewall to switch.</string>
+    <string name="dns_private_dns_note">Android Private DNS is on. This firewall still sends normal, unencrypted lookups to the server chosen here. Encrypted DNS is planned.</string>
+    <string name="dns_main_title">Main DNS server</string>
+    <string name="dns_backup_title">Backup DNS server</string>
+    <string name="dns_backup_subtitle">Used only when the main server does not answer. With no backup the firewall never switches, so a filter set on your router is never bypassed.</string>
+    <string name="dns_choice_system">System DNS</string>
+    <string name="dns_choice_google">Google Public DNS</string>
+    <string name="dns_choice_cloudflare">Cloudflare</string>
+    <string name="dns_choice_custom">Custom address</string>
+    <string name="dns_choice_none">No backup</string>
+    <string name="dns_system_wifi">Your Wi-Fi router</string>
+    <string name="dns_system_mobile">Your mobile carrier (on mobile data)</string>
+    <string name="dns_system_unknown">The network you are connected to</string>
+    <string name="dns_custom_detail">Type the IP address of a DNS server</string>
+    <string name="dns_none_detail">Never switch away from the main server</string>
+    <string name="dns_custom_label">DNS server IP address</string>
+    <string name="dns_custom_invalid">Enter an IP address such as 192.168.1.1</string>
+    <string name="dns_custom_save">Use this server</string>
+    <string name="ch_act_dns_server">DNS server changed</string>
+    <string name="safe_search_youtube_title">Also restrict YouTube</string>
+    <string name="safe_search_youtube_desc">Turns on YouTube Restricted Mode (moderate). Turn off to keep safe search on search sites only.</string>
+    <string name="row_ad_tracker_off">Turned off in Manage Blocklists</string>
+    <string name="row_ad_tracker_empty">No list downloaded yet</string>
+    <string name="badge_not_ready">NOT READY</string>
+    <string name="apps_filter_all">All</string>
+    <string name="apps_filter_allowed">Allowed</string>
+    <string name="apps_filter_blocked">Blocked</string>
+    <string name="apps_filter_empty">No apps match this filter</string>
+    <string name="apps_shared_uid_note">Shares internet access with %1$s. Android blocks and allows them together.</string>
+    <string name="blocklist_updates_6h">Updates every 6 hours</string>
+    <string name="blocklist_updates_day">Updates every day</string>
+    <string name="blocklist_updates_week">Updates every week</string>
+    <string name="blocklist_next_hours">next in about %1$dh</string>
+    <string name="blocklist_next_days">next in about %1$dd</string>
+    <string name="blocklist_next_online">next when online</string>
+    <string name="blocklist_interval_title">How often to update %1$s</string>
+    <string name="blocklist_interval_6h">Every 6 hours</string>
+    <string name="blocklist_interval_day">Every day</string>
+    <string name="blocklist_interval_week">Every week</string>
+    <string name="blocklist_interval_note">Updating more often uses more mobile data. If an update fails, the list you already have stays in use.</string>
+    <string name="blocklist_keeps_old_copy">The list you already have stays in use.</string>
+    <string name="protection_level_title">Protection level</string>
+    <string name="protection_level_subtitle">One tap sets several protections together.</string>
+    <string name="protection_level_current">Current: %1$s</string>
+    <string name="protection_level_custom">Custom</string>
+    <string name="protection_level_custom_hint">Your own mix of switches. Choose a level to set them again.</string>
+    <string name="profile_normal">Normal</string>
+    <string name="profile_strict">Strict</string>
+    <string name="profile_kids">Kids</string>
+    <string name="profile_normal_desc">Blocks ads, trackers and fake look-alike sites.</string>
+    <string name="profile_strict_desc">Normal, plus safe search on Google, Bing and DuckDuckGo.</string>
+    <string name="profile_kids_desc">Strict, plus YouTube restricted mode.</string>
+    <string name="protection_level_confirm_title">Switch to %1$s?</string>
+    <string name="protection_level_confirm_body">This sets the ad and tracker list, look-alike blocking, safe search and YouTube restricted mode to match %1$s, and turns watch-only off. Your blocked apps, websites, schedules and DNS server stay as they are.</string>
+    <string name="protection_level_confirm_btn">Switch</string>
+    <string name="protection_level_applied">Protection level: %1$s</string>
+    <string name="ch_act_protection_level">Protection level changed</string>
+    <string name="alerts_title">Alerts</string>
+    <string name="alerts_subtitle">Security events on this phone, newest first.</string>
+    <string name="alerts_empty">No alerts yet. Warnings about fake sites, failed updates or protection being switched off will appear here.</string>
+    <string name="alerts_history_off">Alerts are not kept, because Activity history is set to Keep nothing.</string>
+    <string name="alerts_keep_note">Alerts are kept as long as your Activity history setting, up to 30 days.</string>
+    <string name="alerts_mark_all_read">Mark all read</string>
+    <string name="alerts_clear_all">Clear all</string>
+    <string name="alerts_clear_confirm_title">Clear all alerts?</string>
+    <string name="alerts_clear_confirm_body">This removes every alert from this list. No setting is changed.</string>
+    <string name="alert_lookalike_blocked_title">Fake look-alike site blocked</string>
+    <string name="alert_lookalike_warned_title">Possible fake look-alike site</string>
+    <string name="alert_lookalike_detail">%1$s looks like %2$s.</string>
+    <string name="alert_blocklist_failed_title">Blocklist update failed</string>
+    <string name="alert_protection_stopped_title">Protection was switched off</string>
+    <string name="alert_protection_stopped_detail">Android or another VPN app turned the firewall off. Turn it on again from Home.</string>
+    <string name="alert_not_started_title">Protection did not start after restart</string>
+    <string name="alert_not_started_detail">Android needs your permission again. Open Home and turn protection on.</string>
+    <string name="alert_rules_lost_title">Your rules were lost</string>
+    <string name="alert_rules_lost_detail">The rules file was damaged and Android reset it. Restore a backup in Protect › Import / Export.</string>
+    <string name="alert_action_block_site">Block this site</string>
+    <string name="alert_action_site_blocked">Blocked</string>
+    <string name="alert_action_open_blocklists">Open blocklists</string>
+    <string name="alert_action_open_home">Go to Home</string>
+    <string name="alert_action_open_backup">Open Import / Export</string>
+    <string name="cd_alerts">Alerts. Unread: %1$d</string>
+    <string name="settings_alerts_subtitle">Warnings about fake sites, failed updates and protection</string>
+    <string name="private_dns_title">Turn off Private DNS first</string>
+    <string name="private_dns_paused_title">Protection paused: Private DNS is on</string>
+    <string name="private_dns_body">Your phone’s Private DNS is set to %1$s. The firewall can’t work while it is on, and together they stop your internet. Set Private DNS to Automatic or Off (Settings › Network &amp; internet, or Connections › More connection settings on Samsung), then turn protection on.</string>
+    <string name="private_dns_open">Open settings</string>
+    <string name="log_detail_open">Show details</string>
+    <string name="log_detail_status_blocked">Blocked</string>
+    <string name="log_detail_status_allowed">Allowed</string>
+    <string name="log_detail_status_watch">Allowed (watch-only)</string>
+    <string name="log_detail_why">Why</string>
+    <string name="log_detail_why_ad_list">This website is on one of your ad and tracker blocklists.</string>
+    <string name="log_detail_why_user_rule">You blocked this website, or the website it belongs to, in the Protect tab.</string>
+    <string name="log_detail_why_schedule">Your blocking schedule was on, and this website is in a group it blocks.</string>
+    <string name="log_detail_why_lookalike">Its name looks like %1$s. Fake look-alike websites are used to steal passwords. Do not type any password there.</string>
+    <string name="log_detail_why_lookalike_generic">Its name looks like a well-known website. Fake look-alike websites are used to steal passwords. Do not type any password there.</string>
+    <string name="log_detail_why_app_blocked">The whole app %1$s is blocked in the Apps tab, so all its websites are stopped.</string>
+    <string name="log_detail_why_watch_only">Watch-only mode was on. This would have been blocked, but it was allowed.</string>
+    <string name="log_detail_why_allowed">Nothing blocked it at that time.</string>
+    <string name="log_detail_why_blocked_other">The firewall blocked it.</string>
+    <string name="log_detail_good_to_know">Good to know</string>
+    <string name="log_detail_hint_lookalike">Its name looks like %1$s. If this is not the real website, do not type any password there.</string>
+    <string name="log_detail_hint_dga">Its name looks randomly made up. Harmful apps sometimes use names like this. This is only a hint, not proof.</string>
+    <string name="log_detail_hint_tunnel">Its name is unusually long or coded. Some apps hide data inside names like this. This is only a hint, not proof.</string>
+    <string name="log_detail_hint_category">Its name suggests: %1$s. This is based on the name only.</string>
+    <string name="log_detail_when">When</string>
+    <string name="log_detail_app_and_time">%1$s · %2$s</string>
+    <string name="log_detail_saved_activity">In your saved activity</string>
+    <string name="log_detail_counts">Blocked: %1$d · Allowed: %2$d</string>
+    <string name="log_detail_apps">Apps that asked for it: %1$d</string>
+    <string name="log_detail_first_seen">First seen: %1$s</string>
+    <string name="log_detail_not_saved">This entry is no longer in your saved activity.</string>
+    <string name="log_detail_see_all">See all entries (%1$d)</string>
+    <string name="log_detail_hide_all">Hide entries</string>
+    <string name="log_detail_showing_latest">Showing the latest %1$d.</string>
+    <string name="log_why_list_named">This website is on your blocklist: %1$s.</string>
+    <string name="log_why_own_exact">You blocked this website in the Protect tab.</string>
+    <string name="log_why_own_parent">You blocked %1$s in the Protect tab. That also covers %2$s.</string>
+    <string name="log_why_country">Your country rule blocks every website ending in .%1$s.</string>
+    <string name="log_why_schedule_named">Your %1$s schedule was on, and this website is in that group.</string>
+    <string name="log_why_allowed_exact">This website is on your Always allow list, so it is never blocked.</string>
+    <string name="log_why_allowed_parent">%1$s is on your Always allow list, and that also covers this website.</string>
+    <string name="log_why_allowed_since">%1$s is now on your Always allow list, so this website is no longer blocked.</string>
+    <string name="log_why_rule_gone">The rule that blocked it is no longer active: it was removed, turned off, or its schedule ended.</string>
+    <string name="log_why_changed">Your rules for this website have changed since then.</string>
+    <string name="log_why_blocked_now">Since then, this website has been blocked.</string>
+    <string name="log_why_app_wifi">The whole app %1$s is blocked on Wi-Fi in the Apps tab.</string>
+    <string name="log_why_app_mobile">The whole app %1$s is blocked on mobile data in the Apps tab.</string>
+    <string name="log_why_app_both">The whole app %1$s is blocked on Wi-Fi and mobile data in the Apps tab.</string>
+    <string name="log_why_app_not_now">The whole app %1$s was blocked in the Apps tab. It is not blocked any more.</string>
+    <string name="log_action_allow">Allow this website</string>
+    <string name="log_action_allow_anyway">Allow anyway…</string>
+    <string name="log_action_block">Block %1$s</string>
+    <string name="log_action_app_hint">To change this, open the Apps tab.</string>
+    <string name="log_action_blocked_done">%1$s blocked</string>
+    <string name="log_action_allowed_done">%1$s added to Always allow</string>
+    <string name="log_action_undone">Change undone</string>
+    <string name="log_action_failed">The change couldn’t be saved. Please try again.</string>
+    <string name="log_action_allow_full">Your Always allow list is full (maximum: %1$d). Remove a website in the Protect tab first.</string>
+    <string name="lookalike_confirm_title">Allow a possible fake website?</string>
+    <string name="lookalike_confirm_body">This name looks like %1$s. Fake look-alike websites are used to steal passwords. Only allow it if you are sure it is safe.</string>
+    <string name="lookalike_confirm_body_generic">This name looks like a well-known website. Fake look-alike websites are used to steal passwords. Only allow it if you are sure it is safe.</string>
+    <string name="lookalike_confirm_allow">Allow anyway</string>
+    <string name="ch_act_domain_always_allowed">Added to Always allow</string>
+    <string name="ch_act_domain_allow_removed">Removed from Always allow</string>
+    <string name="backup_dialog_title">Back up your firewall</string>
+    <string name="backup_dialog_body">Your blocked and allowed websites, app rules, lists and settings are saved to the Downloads folder. You can then share the file.</string>
+    <string name="backup_include_history">Include activity history</string>
+    <string name="backup_include_history_hint">Adds the websites you visited and which app opened them. Anyone you share the file with can read this.</string>
+    <string name="backup_dialog_confirm">Back up</string>
+    <string name="license_apache2">Apache License 2.0</string>
+</resources>

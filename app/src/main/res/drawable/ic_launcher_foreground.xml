@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Polygon mesh lines (hexagonal frame, echoes the lion-mesh logo) -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M54,14 L20,32 M54,14 L88,32 M20,32 L12,62 M88,32 L96,62 M12,62 L32,92 M96,62 L76,92 M32,92 L76,92"
+        android:strokeAlpha="0.35"
+        android:strokeColor="#2563EB"
+        android:strokeWidth="0.8" />
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M20,32 L76,92 M88,32 L32,92"
+        android:strokeAlpha="0.14"
+        android:strokeColor="#06B6D4"
+        android:strokeWidth="0.5" />
+
+    <!-- Mesh node dots -->
+    <path android:fillColor="#06B6D4"
+        android:pathData="M54,14 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+    <path android:fillAlpha="0.85" android:fillColor="#3B82F6"
+        android:pathData="M20,32 m-2.5,0 a2.5,2.5 0 1,0 5,0 a2.5,2.5 0 1,0 -5,0" />
+    <path android:fillAlpha="0.85" android:fillColor="#3B82F6"
+        android:pathData="M88,32 m-2.5,0 a2.5,2.5 0 1,0 5,0 a2.5,2.5 0 1,0 -5,0" />
+    <path android:fillAlpha="0.55" android:fillColor="#1D4ED8"
+        android:pathData="M12,62 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path android:fillAlpha="0.55" android:fillColor="#1D4ED8"
+        android:pathData="M96,62 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path android:fillAlpha="0.45" android:fillColor="#06B6D4"
+        android:pathData="M32,92 m-1.8,0 a1.8,1.8 0 1,0 3.6,0 a1.8,1.8 0 1,0 -3.6,0" />
+    <path android:fillAlpha="0.45" android:fillColor="#06B6D4"
+        android:pathData="M76,92 m-1.8,0 a1.8,1.8 0 1,0 3.6,0 a1.8,1.8 0 1,0 -3.6,0" />
+
+    <!-- Main V mark — signature TacU-NS shape with gradient -->
+    <!-- Outer top corners (26,28) and (82,28), arm thickness 14dp, vertex (54,80) -->
+    <path android:pathData="M26,28 L54,80 L82,28 L68,28 L54,60 L40,28 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:endX="54" android:endY="80"
+                android:startX="54" android:startY="28"
+                android:type="linear">
+                <item android:color="#1A56DB" android:offset="0" />
+                <item android:color="#1565C0" android:offset="0.55" />
+                <item android:color="#06B6D4" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Left-arm inner-edge highlight (subtle depth) -->
+    <path android:fillAlpha="0.13" android:fillColor="#FFFFFF"
+        android:pathData="M26,28 L40,28 L54,60 L54,70 Z" />
+
+    <!-- Vertex glow -->
+    <path android:fillAlpha="0.5" android:fillColor="#06B6D4"
+        android:pathData="M54,80 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+
+    <!-- Arm-tip dots (white) -->
+    <path android:fillAlpha="0.7" android:fillColor="#FFFFFF"
+        android:pathData="M29,28 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path android:fillAlpha="0.7" android:fillColor="#FFFFFF"
+        android:pathData="M79,28 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+
+</vector>

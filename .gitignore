@@ -1,0 +1,23 @@
+.gradle/
+local.properties
+app/build/
+build/
+.idea/
+*.iml
+.env
+
+# Build outputs
+app/release/
+*.code-workspace
+
+# Built/signed APKs & bundles and signing keys must never be committed.
+*.apk
+*.aab
+*.idsig
+*.jks
+*.keystore
+
+# Local helper files
+*.tmp
+__pycache__/
+*.pyc
